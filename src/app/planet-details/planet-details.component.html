@@ -1,0 +1,28 @@
+<div *ngIf="planetDetails$ | async as planetDetails">
+    <div class="content">
+        <h1>{{planetDetails.name}}</h1>
+
+        <section class="listing">
+            <ul>
+                <li>Climate: {{planetDetails.climate}}</li>
+                <li>Diameter: {{planetDetails.diameter}}</li>
+                <li>Gravity: {{planetDetails.gravity}}</li>
+                <li>Orbital Period: {{planetDetails.orbital_period}}</li>
+                <li>Population: {{planetDetails.population}}</li>
+                <li>Rotation Period: {{planetDetails.rotation_period}}</li>
+                <li>Surface Water: {{planetDetails.surface_water}}</li>
+                <li>Terrain: {{planetDetails.terrain}}</li>
+                <div *ngIf="planetDetails.residents | async as residents">
+                    <li>Residents: {{residents.length}}
+                        <ul>
+                            <div *ngFor="let resident of residents">
+                                <li>{{resident}}</li>
+                            </div>
+                        </ul>
+                    </li>
+                </div>
+            </ul>
+        </section>
+    </div>
+
+</div>

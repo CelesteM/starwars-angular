@@ -1,0 +1,11 @@
+<div class="list">
+    <div class="card-container">
+        <div *ngFor="let planet of planets$ | async" class="item">
+            <a [routerLink]="['/planets', planet.id]" class="card" target="_blank">
+                <span>
+                    {{planet.name}}
+                </span>
+            </a>
+        </div>
+    </div>
+</div>

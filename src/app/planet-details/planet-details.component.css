@@ -1,0 +1,8 @@
+.content {
+    margin-left: 10%;
+}
+
+.content.listing li {
+    font-size: 14px;
+    margin: 10px auto;
+}
